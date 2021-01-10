@@ -1,0 +1,26 @@
+h1{
+  font-family: 'Tangerine', sans-serif;
+  
+}
+img{
+width:200px;
+}
+a{
+border: 2px solid orange;
+padding: 5px;
+
+}
+a:hover{
+background-color: black;
+color: rgb(255, 238, 0);
+text-decoration: none;
+}
+td{
+width: 400px;
+}
+body{
+background-color: #81ffb1;
+}
+h2{
+  font-family: 'Tangerine', sans-serif;
+}
