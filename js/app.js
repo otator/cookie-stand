@@ -1,11 +1,10 @@
 var hoursPerDay = 14;
 var mainContainer = document.getElementById('main-container');
 
-var locationObject = {
-  minHourlyCustomers: 0,
-  maxHourlyCustomers: 0,
-  averageCookiesPerHour:0,
-  location:'',
+var Seattle  = {
+  minHourlyCustomers: 23,
+  maxHourlyCustomers: 65,
+  averageCookiesPerHour:6.3,
   randomNumber: function (min, max) {
     return Math.ceil(Math.random() * (max - min) + min);
   },
@@ -20,18 +19,93 @@ var locationObject = {
     return numOfCustomers * this.averageCookiesPerHour;
   }
 };
-var locationDetails = [['Seattle',23,65,6.3],['Tokyo',3,24,1.2],['Dubai', 11,38, 3.7],['Paris', 20,38,2.3],['Lima',2,16,4.6]];
-for(var i=0; i<locationDetails.length; i++){
-  locationObject.location = locationDetails[i][0];
-  locationObject.minHourlyCustomers = locationDetails[i][1];
-  locationObject.maxHourlyCustomers = locationDetails[i][2];
-  locationObject.averageCookiesPerHour= locationDetails[i][3];
-  locationObject.cookiesPurchasedPerHour(hoursPerDay);
-  createListDocument(locationObject);
-}
 
+Seattle.cookiesPurchasedPerHour(hoursPerDay);
 
-//fill the array of hourly cookies amount
+var Tokyo  = {
+  minHourlyCustomers: 3,
+  maxHourlyCustomers: 24,
+  averageCookiesPerHour:1.2,
+  randomNumber: function (min, max) {
+    return Math.ceil(Math.random() * (max - min) + min);
+  },
+  amountOfCookiesPerHourArray :[],
+  cookiesPurchasedPerHour: function(hoursPerDay){
+    for(var i=0; i<hoursPerDay; i++){
+      var customerNubmer = this.randomNumber(this.minHourlyCustomers, this.maxHourlyCustomers);
+      this.amountOfCookiesPerHourArray[i] = Math.floor(this.calculateSoldCookiesPerHour(customerNubmer));
+    }
+  },
+  calculateSoldCookiesPerHour: function(numOfCustomers){
+    return numOfCustomers * this.averageCookiesPerHour;
+  }
+};
+
+Tokyo.cookiesPurchasedPerHour(hoursPerDay);
+
+var Dubai  = {
+  minHourlyCustomers: 11,
+  maxHourlyCustomers: 38,
+  averageCookiesPerHour: 3.7,
+  randomNumber: function (min, max) {
+    return Math.ceil(Math.random() * (max - min) + min);
+  },
+  amountOfCookiesPerHourArray :[],
+  cookiesPurchasedPerHour: function(hoursPerDay){
+    for(var i=0; i<hoursPerDay; i++){
+      var customerNubmer = this.randomNumber(this.minHourlyCustomers, this.maxHourlyCustomers);
+      this.amountOfCookiesPerHourArray[i] = Math.floor(this.calculateSoldCookiesPerHour(customerNubmer));
+    }
+  },
+  calculateSoldCookiesPerHour: function(numOfCustomers){
+    return numOfCustomers * this.averageCookiesPerHour;
+  }
+};
+Dubai.cookiesPurchasedPerHour(hoursPerDay);
+var Paris  = {
+  minHourlyCustomers: 20,
+  maxHourlyCustomers: 38,
+  averageCookiesPerHour: 2.3,
+  randomNumber: function (min, max) {
+    return Math.ceil(Math.random() * (max - min) + min);
+  },
+  amountOfCookiesPerHourArray :[],
+  cookiesPurchasedPerHour: function(hoursPerDay){
+    for(var i=0; i<hoursPerDay; i++){
+      var customerNubmer = this.randomNumber(this.minHourlyCustomers, this.maxHourlyCustomers);
+      this.amountOfCookiesPerHourArray[i] = Math.floor(this.calculateSoldCookiesPerHour(customerNubmer));
+    }
+  },
+  calculateSoldCookiesPerHour: function(numOfCustomers){
+    return numOfCustomers * this.averageCookiesPerHour;
+  }
+};
+Paris.cookiesPurchasedPerHour(hoursPerDay);
+var Lima  = {
+  minHourlyCustomers: 2,
+  maxHourlyCustomers: 16,
+  averageCookiesPerHour:4.6,
+  randomNumber: function (min, max) {
+    return Math.ceil(Math.random() * (max - min) + min);
+  },
+  amountOfCookiesPerHourArray :[],
+  cookiesPurchasedPerHour: function(hoursPerDay){
+    for(var i=0; i<hoursPerDay; i++){
+      var customerNubmer = this.randomNumber(this.minHourlyCustomers, this.maxHourlyCustomers);
+      this.amountOfCookiesPerHourArray[i] = Math.floor(this.calculateSoldCookiesPerHour(customerNubmer));
+    }
+  },
+  calculateSoldCookiesPerHour: function(numOfCustomers){
+    return numOfCustomers * this.averageCookiesPerHour;
+  }
+};
+Lima.cookiesPurchasedPerHour(hoursPerDay);
+createListDocument(Seattle);
+createListDocument(Dubai);
+createListDocument(Tokyo);
+createListDocument(Paris);
+createListDocument(Lima);
+
 
 function createListDocument(locationObject){
   var listItem;
@@ -64,3 +138,4 @@ function createListDocument(locationObject){
   listOfCookiesPerHour.appendChild(listItem);
 
 }
+
