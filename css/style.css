@@ -15,15 +15,52 @@ background-color: black;
 color: rgb(255, 238, 0);
 text-decoration: none;
 }
+a:visited{
+  color: black;
+}
 td{
 width: 400px;
-}
-body{
-background-color: #81ffb1;
 }
 h2{
   font-family: 'Tangerine', sans-serif;
 }
 main{
-  margin-top: 200px;
+  margin-top: 100px;
+}
+td img{
+  position: relative;
+  top: -30px;
+  left: 30px;
+}
+#nav-url{
+  position: relative;
+  left: 80%;
+  font-size: 18px;
+  top: -15px;
+}
+.container img{
+  margin-left: 30px;
+}
+
+h3{
+  color: orange;
+  text-shadow: black 2px 2px;
+  font-family: cursive;
+  margin-left: 30px;
+  margin-top: 50px;
+}
+footer{
+  background-color: orange;
+}
+h4{
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+h6{
+  font-size: 15px;
+  margin-left: 30px;
+}
+footer td, footer h6{
+  text-align: center;
 }
