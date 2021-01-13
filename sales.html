@@ -28,45 +28,66 @@
     <div>
       <marquee>
         <img src="assets/chinook.jpg" alt="fish image">
-      </marquee>
+      </marquee>  
       <marquee direction="right">
         <img src="assets/salmon.png" alt=" fish image">
       </marquee>
+      <form id="form-id">
+        <fieldset>
+          <legend>Add Branch</legend>
+
+          <label for="city-id">City Name</label>
+          <input type="text" id="city-id" name="city-name" placeholder="Enter city name" required>
+
+          <label for="min-customer-id">Min Number</label>
+          <input type="number" id="min-customer-id" name="min-customer-name" placeholder="Enter min customers per hour" min="1">
+
+          <label for="max-customer-id">Max Number</label>
+          <input type="number" id="max-customer-id" name="max-customer-name" placeholder="Enter max customers per hour" min="1">
+
+          <label for="avg-cookies-id">Avg Number</label>
+          <input type="number" id="avg-cookies-id" name="avg-cookies-name" placeholder="Enter Average Cookies Sold">
+
+          <input type="submit" name="submit-button" id="submit-button-id" value="Add Branch">
+
+        </fieldset>
+      </form>
     </div>
 
-    </main>
-    <footer>
-      <h4>Contact Us</h4>
-      <table>
-        <tr>
-          <td>
-            <h6>Seattle</h6>
-            <h6>6am - 8am</h6>
-            <h6>+1-555-9635-999</h6>
-          </td>
-          <td>
-            <h6>Tokyo</h6>
-            <h6>6am - 8am</h6>
-            <h6>+81102156064</h6>
-          </td>
-          <td>
-            <h6>Dubai</h6>
-            <h6>6am - 8am</h6>
-            <h6>+1-555-9635-999</h6>
-          </td>
-          <td>
-            <h6>Paris</h6>
-            <h6>6am - 8am</h6>
-            <h6>+33-775-5536-69</h6>
-          </td>
-          <td>
-            <h6>Lima</h6>
-            <h6>6am - 8am</h6>
-            <h6>+51-955-5407-79</h6>
-          </td>
-        </tr>
-      </table>
-    </footer>    
-    <script src="js/app.js"></script>
+  </main>
+  <footer>
+    <h4>Contact Us</h4>
+    <table>
+      <tr>
+        <td>
+          <h6>Seattle</h6>
+          <h6>6am - 8am</h6>
+          <h6>+1-555-9635-999</h6>
+        </td>
+        <td>
+          <h6>Tokyo</h6>
+          <h6>6am - 8am</h6>
+          <h6>+81102156064</h6>
+        </td>
+        <td>
+          <h6>Dubai</h6>
+          <h6>6am - 8am</h6>
+          <h6>+1-555-9635-999</h6>
+        </td>
+        <td>
+          <h6>Paris</h6>
+          <h6>6am - 8am</h6>
+          <h6>+33-775-5536-69</h6>
+        </td>
+        <td>
+          <h6>Lima</h6>
+          <h6>6am - 8am</h6>
+          <h6>+51-955-5407-79</h6>
+        </td>
+      </tr>
+    </table>
+  </footer>
+  <script src="js/app.js"></script>
 </body>
+
 </html>

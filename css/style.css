@@ -64,3 +64,52 @@ h6{
 footer td, footer h6{
   text-align: center;
 }
+
+button{
+  position: relative;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  padding: 5px;
+  height: 50px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  background: rgb(255,252,0);
+background: linear-gradient(90deg, rgba(255,252,0,1) 0%, rgba(249,159,2,1) 35%, rgba(255,76,0,1) 100%);
+font-family: sans-serif;
+}
+
+label{
+  margin-left: 5px;
+  margin-bottom: 2px;
+}
+
+input{
+  display: block;
+  width: 200px;
+  height: 25px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  text-indent: 5px;
+}
+#submit-button-id{
+  width:100px;
+  height: 30px;
+  margin:10px;
+  padding:5px;
+  font-weight: bold;
+  background: rgb(255,252,0);
+background: linear-gradient(90deg, rgba(255,252,0,1) 0%, rgba(249,159,2,1) 35%, rgba(255,76,0,1) 100%);
+font-family: sans-serif;
+}
+form{
+  padding:10px;
+  margin-bottom: 20px;
+}
+legend{
+  font-size: 28px;
+  font-family: fantasy;
+  background:linear-gradient(90deg, rgba(255,252,0,1) 0%, rgba(249,159,2,1) 35%, rgba(255,76,0,1) 100%); ;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
