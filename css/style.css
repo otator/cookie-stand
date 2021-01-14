@@ -1,3 +1,13 @@
+body{
+  font-family: Helvetica;
+  background: #121212;
+}
+header{
+  background:rgb(37, 37, 37);
+}
+form{
+  background-color: #2e2e2e;
+}
 h1{
   font-family: 'Tangerine', sans-serif;
   
@@ -45,7 +55,7 @@ td img{
 h3{
   color: orange;
   text-shadow: black 2px 2px;
-  font-family: cursive;
+  font-family: Georgia;
   margin-left: 30px;
   margin-top: 50px;
 }
@@ -82,6 +92,7 @@ font-family: sans-serif;
 label{
   margin-left: 5px;
   margin-bottom: 2px;
+  color: white;
 }
 
 input{
@@ -112,4 +123,17 @@ legend{
   background:linear-gradient(90deg, rgba(255,252,0,1) 0%, rgba(249,159,2,1) 35%, rgba(255,76,0,1) 100%); ;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+table, tr, td{
+  color: white;
+}
+th{
+  color: orange;
+}
+footer td{
+  color: black;
+}
+footer h5{
+  margin-left:10px;
+ 
 }

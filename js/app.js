@@ -138,7 +138,6 @@ LocationObject.prototype.createFooterData = function () {
     sum = 0;
   }
   arrayOfTotals.push(totalOfTotals);
-  //console.log(arrayOfTotals);
   return arrayOfTotals;
 };
 
@@ -174,7 +173,6 @@ function renderPage(array){
   }
   var footerContent0 = object.createFooterData();
   object.createRow(mainTable, footerContent0,false, true );
-  console.log(locationsArray.length);
   mainContainer.appendChild(mainTable);
 }
 //call the function so that we have first 5 branches shown on the screeen
@@ -182,22 +180,23 @@ renderPage(locationsArray);
 
 
 //get the submit button as variable in java script
-var addBranchButton = document.getElementById('submit-button-id');
+var addBranchButton = document.getElementById('form-id');
 //add en eveent listener to the button of type click, and a function
 //to be executed once the click event happen
-addBranchButton.addEventListener('click', addBranch);
+addBranchButton.addEventListener('submit', addBranch);
 
 //this function takes the input information from the form ans store them in variables
 function addBranch(event) {
   //preventing the default behaviour of the form, (reloading the page after each submit)
   event.preventDefault();
   //get the city name from input filed
-  var cityName = document.getElementById('city-id').value;
+  var cityName = event.target.cityNameField.value;
   //get the minCustomersNumber from input field
-  var minCustomersNumber = Number(document.getElementById('min-customer-id').value);
+  var minCustomersNumber = Number(event.target.minCustomerField.value);
   //get the mazCustomersNumber from input field
-  var maxCustomersNumber = Number(document.getElementById('max-customer-id').value);
+  var maxCustomersNumber = Number(event.target.maxCustomerField.value);
   //check if the the minCustomersNumber bigger that maxCustomersNumber, if true
+
   // switch them, and alert the user of the changing
   if(minCustomersNumber > maxCustomersNumber){
     //switch the values using third variable
@@ -207,7 +206,7 @@ function addBranch(event) {
     alert('You entered min value  bigger than the max value\nSo that the values switched');
   }
   //get the avgCookiesNumber from input filed
-  var avgCookiesNumber = Number(document.getElementById('avg-cookies-id').value);
+  var avgCookiesNumber = Number(event.target.avgCookiesField.value);
   //empty the table, so that the content won't be duplicated once new branch added
   mainTable.textContent = '';
   //empty the 2D array the has the amount of cookies sold per each branch for each hour
